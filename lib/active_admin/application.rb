@@ -232,7 +232,7 @@ module ActiveAdmin
 
     # Adds before, around and after filters to all controllers.
     # Example usage:
-    #   ActiveAdmin.before_filter :authenticate_admin!
+    #   ActiveAdmin.before_action :authenticate_admin!
     #
     AbstractController::Callbacks::ClassMethods.public_instance_methods.
       select { |m| m.match(/(filter|action)/) }.each do |name|

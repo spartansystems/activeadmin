@@ -126,7 +126,7 @@ describe 'defining new actions from registration blocks' do
     end
 
     failure_message do |filter|
-      message = "expected before_filter to set the @page_title to '#{expected}', but was '#{@actual}'"
+      message = "expected before_action to set the @page_title to '#{expected}', but was '#{@actual}'"
     end
   end
 end

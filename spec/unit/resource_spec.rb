@@ -301,8 +301,8 @@ module ActiveAdmin
 
       context "filters" do
         [
-          :before_filter, :skip_before_filter,
-          :after_filter, :skip_after_filter,
+          :before_action, :skip_before_action,
+          :after_action, :skip_after_action,
           :around_filter, :skip_filter
         ].each do |filter|
           it "delegates #{filter}" do

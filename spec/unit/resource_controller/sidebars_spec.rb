@@ -3,7 +3,7 @@ require 'rails_helper'
 describe ActiveAdmin::ResourceController::Sidebars do
   let(:controller){ Admin::PostsController }
 
-  context 'without before_filter' do
+  context 'without before_action' do
     before do
       ActiveAdmin.register Post
     end
@@ -16,7 +16,7 @@ describe ActiveAdmin::ResourceController::Sidebars do
   describe '#skip_sidebar!' do
     before do
       ActiveAdmin.register Post do
-        before_filter :skip_sidebar!
+        before_action :skip_sidebar!
       end
     end
 
@@ -39,7 +39,7 @@ describe ActiveAdmin::ResourceController::Sidebars do
     end
 
     failure_message do |filter|
-      message = "expected before_filter to set @skip_sidebar to '#{expected}', but was '#{@actual}'"
+      message = "expected before_action to set @skip_sidebar to '#{expected}', but was '#{@actual}'"
     end
   end
 end
